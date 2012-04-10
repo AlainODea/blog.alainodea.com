@@ -1,0 +1,31 @@
+% Zotonic site configuration for blog.
+[
+    % This site is enabled or not.
+    {enabled, true},
+
+    % Atomic hostname, MUST be equal to the directory name of this site.
+    {host, blog},
+
+    % Hostname on which this site runs
+    {hostname, "blog.alainodea.com"},
+
+    % Aliases which should redirect to the primary hostname
+    {hostalias, "alainodea.com"},
+    {hostalias, "alainodea.com."},
+
+    % PostgreSQL database connection
+    {dbdatabase, "zotonic_blog"},
+
+    % What skeleton site this site is based on; for installing the initial data.
+    {skeleton, blog},
+ 
+    %% Specific options
+
+    %% Title of your site
+    {title, <<"Concise Software - Alain O'Dea">>},
+    %% Subtitle
+    {subtitle, <<"built with Zotonic, the Erlang CMS.">>},
+
+    %% Page length
+    {pagelen, 5}
+].
