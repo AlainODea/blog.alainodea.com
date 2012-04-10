@@ -5,7 +5,7 @@
 
 	<!--
 		Website built by:
-		Alain O'Dea
+		Alain O'Dea https://github.com/AlainODea
 
 		Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
 	-->
