@@ -7,6 +7,8 @@
 		Website built by:
 		Alain O'Dea https://github.com/AlainODea
 
+Example mod_github_sync
+
 		Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
 	-->
 
