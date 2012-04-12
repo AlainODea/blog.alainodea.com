@@ -7,8 +7,6 @@
 		Website built by:
 		Alain O'Dea https://github.com/AlainODea
 
-Test Post-Receive Hook
-
 		Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
 	-->
 
