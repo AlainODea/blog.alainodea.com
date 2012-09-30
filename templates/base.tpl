@@ -1,93 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>{% block title %}{% endblock %} &mdash; {{ m.config.site.title.value }}</title>
+<html lang="{{ z_language|default:"en"|escape }}">
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}{% endblock %} &mdash; {{ m.config.site.title.value }}</title>
 
-	<!--
-		Website built by:
-		Alain O'Dea https://github.com/AlainODea
+		<!--
+			Website built by:
+			YOUR NAME HERE
 
-		Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
-	-->
+			Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
+		-->
 
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-	<meta name="author" content="YOUR NAME HERE &copy; 2009" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="YOUR NAME HERE &copy; 2012" />
 
-	{% all include "_html_head.tpl" %}
+		{% all include "_html_head.tpl" %}
 
-	{% lib "css/zp-compressed.css" "css/zp-project.css" "css/zp-menu.css" "css/jquery.loadmask.css"  %}
-	<!--[if IE]>{% lib "css/zp-ie.css" %}<![endif]-->
-	{% lib "js/apps/modernizr.js" %}
-	{% block html_head_extra %}{% endblock %}
-</head>
-<body class="{% block page_class %}page{% endblock %}">
+		{% lib
+			"bootstrap/css/bootstrap.min.css"
+			"bootstrap/css/bootstrap.responsive.min.css"
+			"css/jquery.loadmask.css"
+			"css/z-menu.css"
+			"css/project.css"
+		%}
 
-	<section class="skip">
-		<a href="#content-area" title="Go directly to page content">Go to page content</a>
-	</section>
+		{% block html_head_extra %}{% endblock %}
+	</head>
+	<body class="{% block page_class %}page{% endblock %}">
 
-    <section class="zp-wrapper">
+		<div class="navbar navbar-fixed-top">
 
-        <header class="clearfix">
-        	<h1 class="left"><a href="/">{{ m.config.site.title.value }} {% if m.config.site.subtitle.value %}<span>{{ m.config.site.subtitle.value }}</span>{% endif %}</a>
-</h1>
-        </header>
-        <nav class="clearfix">
-            {% menu id=id %}
-        </nav>
+			<div class="navbar-inner">
+				<div class="container">
+				<a class="brand" href="/">{{ m.config.site.title.value }} {% if m.config.site.subtitle.value %}{% endif %}</a>
+					{# <span>{{ m.config.site.subtitle.value }}</span> #}
 
-        <section id="content-area" class="clearfix">
-<p>A journey to find those pieces of software or technology that facilitate productive and maintainable software development</p>
+					{% menu id=id %}
+				</div>
+			</div>
+		</div>
+		<!-- end navbar -->
 
-			{% block content_area %}
-			{% block chapeau %}{% endblock %}
+		<div class="container">
 
-            <article id="content" class="zp-65">
-                <div class="padding">
-                    {% block content %}
-						<!-- The default content goes here. -->
-                    {% endblock %}
-                </div>
-            </article>
+			<div class="row">
+				{% block content_area %}
+					{% block chapeau %}{% endblock %}
 
-            <section id="sidebar" class="zp-35 last">
-                {% block sidebar %}
-					{% include "_sidebar.tpl" %}
-    	        {% endblock %}
-            </section>
+					<div class="span8">
+						{% block content %}
+							<!-- The default content goes here. -->
+						{% endblock %}
+					</div>
 
-			{% endblock %}
+					<div id="sidebar" class="span4">
+						{% block sidebar %}
+							{% include "_sidebar.tpl" %}
+						{% endblock %}
+					</div>
 
-        </section>
+				{% endblock %}
 
-        <footer class="clearfix">
-			<nav class="left">{% menu id=id menu_id='footer_menu' %}</nav>
-			<section class="right">
-				<p class="footer-blog-title">{_ Website powered by _} <a href="http://zotonic.com">Zotonic</a> {{ m.config.zotonic.version.value }}.</p>
-			</section>
-		</footer>
+			</div>
 
-    </section>
+			<div class="row">
+				<div class="span12" id="footer">
+					<div class="pull-right">
+						<p class="footer-blog-title">{_ Website powered by _} <a href="http://zotonic.com">Zotonic</a> {{ m.config.zotonic.version.value }}.</p>
+					</div>
+					{% menu id=id menu_id='footer_menu' %}
+				</div>
+			</div>
+		</div>
 
-	{% include "_js_include_jquery.tpl" %}
-    {% lib 
-			"js/apps/zotonic-1.0.js" 
-			"js/apps/z.widgetmanager.js" 
-			"js/modules/livevalidation-1.3.js" 
+		{% include "_js_include_jquery.tpl" %}
+		{% lib
+			"bootstrap/js/bootstrap.min.js"
+			"js/apps/zotonic-1.0.js"
+			"js/apps/z.widgetmanager.js"
+			"js/modules/livevalidation-1.3.js"
 			"js/modules/z.inputoverlay.js"
 			"js/modules/jquery.loadmask.js"
-            "js/z.superfish.js" 
-	%}
-	
-	{% block _js_include_extra %}{% endblock %}
+			"js/z.superfish.js"
+		%}
 
-    <script type="text/javascript">
-        $(function() { $.widgetManager(); });
-    </script>
+		{% block _js_include_extra %}{% endblock %}
 
-	{% stream %}
-    {% script %}
+		<script type="text/javascript">
+			$(function() { $.widgetManager(); });
+		</script>
 
-    {% all include "_html_body.tpl" %}
-</body>
+		{% stream %}
+		{% script %}
+
+		{% all include "_html_body.tpl" %}
+	</body>
 </html>

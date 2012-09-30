@@ -2,12 +2,12 @@
 %% @copyright YYYY author.
 %% @doc Example contact-form handler.
 
--module(resource_default_contact).
+-module(controller_default_contact).
 -export([event/2]).
 
 -include_lib("zotonic.hrl").
 
-event({submit, {contact, []}, _TriggerId, _TargetId}, Context) ->
+event(#submit{message={contact, []}}, Context) ->
     Vars = [{mail, z_context:get_q("mail", Context)},
             {name, z_context:get_q("name", Context)},
             {message, z_context:get_q("message", Context)}],
