@@ -57,6 +57,9 @@
 						{% block sidebar %}
 							{% include "_sidebar.tpl" %}
 						{% endblock %}
+						<!-- IPv6-test.com button BEGIN -->
+						<a href='http://ipv6-test.com/validate.php?url=referer'><img src='http://ipv6-test.com/button-ipv6-big.png' alt='ipv6 ready' title='ipv6 ready' border='0' /></a>
+						<!-- IPv6-test.com button END -->
 					</div>
 
 				{% endblock %}
