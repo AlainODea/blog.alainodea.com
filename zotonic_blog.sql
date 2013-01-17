@@ -995,7 +995,7 @@ COPY config (id, module, key, value, props, created, modified) FROM stdin;
 12	mod_comment_disqus	disqus_shortname	concise-software	\N	2011-09-16 22:05:32.683478-04	2011-09-16 22:05:32.683478-04
 14	mod_github_sync	accepted_token	2jVJvljPi4EfUea8io9yhrmDTiQjMLTQHKnnvZrW	\N	2012-04-11 22:46:47.674313-04	2012-04-11 22:46:47.674313-04
 13	mod_github_sync	accepted_ips	207.97.227.253, 50.57.128.197, 142.162.230.159	\N	2012-04-11 22:45:48.184542-04	2012-04-11 22:52:36.823504-04
-3	zotonic	version	0.9-dev	\N	2011-06-18 20:49:45.992107-04	2012-09-29 16:45:17.61752-04
+3	zotonic	version	0.9-dev	\N	2011-06-18 20:49:45.992107-04	2013-01-17 08:07:37.09265-05
 \.
 
 
