@@ -6,7 +6,7 @@
 
 		<!--
 			Website built by:
-			YOUR NAME HERE
+			Alain O'Dea
 
 			Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
 		-->
