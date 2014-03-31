@@ -1486,7 +1486,6 @@ SELECT pg_catalog.setval('rsc_id_seq', 462, true);
 --
 
 COPY rsc_pivot_queue (rsc_id, serial, due, is_update) FROM stdin;
-461	1	2014-03-31 12:16:53.012429	t
 \.
 
 
