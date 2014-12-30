@@ -1,12 +1,12 @@
 {% if big %}
 
-	<section class="post clearfix">
+	<section class="post clearfix big">
 
 		<h1><a href="{{m.rsc[id].page_url }}" title="{{ m.rsc[id].title }}">{{ m.rsc[id].title }}</a></h1>
 		{% include "_article_meta.tpl" id=id %}
 
-		{% ifequal m.rsc[id].media[1].mime "text/html-video-embed" %}
-			<section class="video-wrapper clearfix">
+		{% ifequal m.rsc[id].media[1].mime "text/html-oembed" %}
+			<section class="oembed-wrapper clearfix">
 				{% media m.rsc[id].media[1] %}
 			</section>
 		{% else %}
@@ -32,7 +32,7 @@
 		<h1><a href="{{m.rsc[id].page_url }}">{{ m.rsc[id].title }}</a></h1>
 		{% include "_article_meta.tpl" id=id %}
 		<p class="summary">
-			{{ m.rsc[id].summary|default:m.rsc[id].body|striptags|truncate:100 }} <a href="{{ m.rsc[id].page_url }}">{_ Read more _}&nbsp;&raquo;</a>
+			{{ m.rsc[id].summary|default:m.rsc[id].body|striptags|truncate:300 }} <a href="{{ m.rsc[id].page_url }}">{_ Read more _}&nbsp;&raquo;</a>
 		</p>
 	</section>
 
