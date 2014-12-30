@@ -1,6 +1,6 @@
-%% @author 
-%% @copyright 2011 
-%% Generated on 2011-06-18
+%% @author Alain O'Dea
+%% @copyright 2014
+%% Generated on 2014-12-29
 %% @doc This site was based on the 'blog' skeleton.
 
 %% Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +16,9 @@
 %% limitations under the License.
 
 -module(blog).
--author("").
+-author("Alain O'Dea").
 
--mod_title("blog zotonic site").
+-mod_title("Concise Software").
 -mod_description("A simple weblog, used as an example of how to create a Zotonic site.").
 -mod_prio(10).
 
