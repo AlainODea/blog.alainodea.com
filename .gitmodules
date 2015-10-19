@@ -1,0 +1,7 @@
+[submodule "mod_comment_disqus"]
+     path = modules/mod_comment_disqus
+     url = git@github.com:AlainODea/mod_comment_disqus.git
+[submodule "mod_syntaxhighlighter"]
+     path = modules/mod_syntaxhighlighter
+     url = git@github.com:AlainODea/mod_syntaxhighlighter.git
+
