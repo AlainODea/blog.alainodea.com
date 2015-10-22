@@ -8,7 +8,7 @@
 			Website built by:
 			Alain O'Dea
 
-			Proudly powered by: Zotonic, the Erlang CMS <http://www.zotonic.com>
+			Proudly powered by: Zotonic, the Erlang Web Framework <http://www.zotonic.com>
 		-->
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
