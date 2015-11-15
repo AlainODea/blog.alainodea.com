@@ -10,8 +10,10 @@
     {hostname, "blog.alainodea.com"},
 
     % Aliases which should redirect to the primary hostname
-    {hostalias, "alainodea.com"},
-    {hostalias, "alainodea.com."},
+    {hostalias, [
+        "alainodea.com",
+        "alainodea.com."
+    ]},
 
     % PostgreSQL database connection
     {dbdatabase, "zotonic_blog"},
