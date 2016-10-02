@@ -9,10 +9,14 @@
     % Hostname on which this site runs
     {hostname, "blog.alainodea.com"},
 
+    % make sure Zotonic generates links with HTTPS
+    {protocol, https},
+
     % Aliases which should redirect to the primary hostname
     {hostalias, [
         "alainodea.com",
-        "alainodea.com."
+        "alainodea.com.",
+        "www.alainodea.com"
     ]},
 
     % PostgreSQL database connection
