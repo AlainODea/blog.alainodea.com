@@ -25,6 +25,7 @@
 		%}
 
 		{% block html_head_extra %}{% endblock %}
+		<script src="https://widget.battleforthenet.com/widget.js" async></script>
 	</head>
 	<body class="{% block page_class %}page{% endblock %}">
 
